@@ -79,7 +79,7 @@ for video in playlist:
 			except Exception,exc:
 				print str(exc)
 		#play video
-		process = subprocess.call(['omxplayer', '-b', '-o', 'local', abs_path + video.filename, '--vol', str(vol), '--no-osd'], stdout=open(os.devnull, 'wb'))
+		process = subprocess.call(['omxplayer', '-b', '-o', 'hdmi', abs_path + video.filename, '--vol', str(vol), '--no-osd'], stdout=open(os.devnull, 'wb'))
 
 #increment .count_playlist
 with open(abs_path + '.count_playlist') as count_playlist:
